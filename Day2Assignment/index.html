@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day2 Assignment</title>
+</head>
+
+<body>
+    <script>
+        //Assignment 1:Function to take an input and check whether positive or negative or 0.
+
+        let n1 = window.prompt("Enter a number to check negative or positive or 0:");
+        let numberChecker = (num) => {
+            if (num > 0) {
+                console.log(num + " is positive");
+            }
+            else if (num < 0) {
+                console.log(num + " is negative");
+            }
+            else {
+                console.log("The entered number is 0");
+            }
+        }
+        numberChecker(Number(n1));
+
+        //Assignment2:To find the factorial of a positive number
+        let n2 = window.prompt("Enter a positive number to find factorial:");
+        let factorialCal = (num) => {
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            console.log("The factorial of " + num + " is " + fact);
+        }
+        factorialCal(Number(n2));
+        //Assignment3:To find larger one between two numbers
+        let largerFnc = (n1, n2) => {
+            if (n1 > n2)
+                return n1;
+            else {
+                return n2;
+            }
+        }
+        let larNum = largerFnc(3, 2);
+        console.log("Larger number:" + larNum);
+
+        //Assignment4:To check palindrome or not
+        let palindromeCheck = (str) => {
+            let temp = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                temp += str[i];
+            }
+            console.log(temp);
+
+            if (temp == str) {
+                console.log(str + " is palindrome");
+            }
+            else {
+                console.log(str + " is not palindrome");
+            }
+
+        }
+        palindromeCheck("ibobi");
+
+        //Assignment5:To find prime numbers below or equal to given number
+        let primeCheck = (num) => {
+
+            for (let i = num; i > 1; i--) {
+                let check = -1;
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        check = 0;
+                        break;
+                    }
+                }
+                if (check == -1) {
+                    console.log(i);
+                }
+            }
+        }
+        primeCheck(6);
+
+        //Assignment 6:Simple calculator
+        let calcFn = (n1, n2, oper) => {
+            if (oper == '+') {
+                console.log(n1 + n2);
+            }
+            else if (oper == '-') {
+                console.log(n1 - n2);
+            }
+            else if (oper == '*') {
+                console.log(n1 * n2);
+            }
+            else if (oper == '/') {
+                console.log(n1 / n2);
+            }
+        };
+        calcFn(6, 2, '+');
+
+        //Assignment 7:To find vowels in a string
+        let vowelCheck = (str) => {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                    count++;
+                }
+                else if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+                    count++;
+                }
+            }
+            console.log(count);
+        };
+
+        vowelCheck("Aeroplane");
+
+        //Assignment 8:To check whether a perfect number or not
+        let perfectFnc = (num) => {
+            let sum = 0;
+            for (let i = 1; i < num; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == num) {
+                console.log(num + " is a perfect number");
+            }
+            else {
+                console.log(num + " is not a perfect number");
+            }
+        };
+        perfectFnc(6);
+
+        //Assigment 9:To print fibonacci series upto a given number
+        let fibboFnc = (num) => {
+            let n1 = 0;
+            let n2 = 1;
+            let sum = 0;
+            console.log(0);
+            console.log(1);
+            for (let i = 2; i < num; i++) {
+                sum = n1 + n2;
+                n1 = n2;
+                n2 = sum;
+                console.log(sum);
+            }
+        };
+        fibboFnc(4);
+        //Assignment 10:To print multiplication table of a given positive number
+        let multTable = (n) => {
+            for (let i = 0; i < 10; i++) {
+                console.log(n + " * " + (i + 1) + " = " + n * (i + 1));
+            }
+        };
+        multTable(9);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Bootcamp Assigment 1</title>
+</head>
+
+<body>
+    <script>
+        //Assignment1
+        let fruits = [];
+        fruits = ["apple", "banana", "orange"];
+        fruits.splice(0, 1);
+
+        fruits.push("grape");
+        fruits[1] = "pear";
+        console.log(fruits);
+        //Assignment2
+        let person = {};
+        person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        delete person["age"];
+        person["job"] = "Engineer";
+        person["city"] = "San Francisco";
+        console.log(person);
+        //Assignment3
+        let cars = [];
+        cars = [{
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        },
+        {
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        },
+        {
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        }];
+        cars.splice(0, 1);
+        let obj = {
+            make: "Honda",
+            model: "Civic",
+            year: 2020
+        };
+        cars.push(obj);
+        cars[1].model = "Accord";
+        console.log(cars);
+
+
+    </script>
+</body>
+
+</html>
